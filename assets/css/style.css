@@ -1,5 +1,7 @@
 * {
     text-align: center;
+    position: relative;
+    top: 20%;
 }
 .purpbutton {
     background-color: blueviolet;
@@ -12,4 +14,7 @@
 }
 a {
     text-underline-position: none;
+}
+ul {
+    list-style-type: none;
 }
