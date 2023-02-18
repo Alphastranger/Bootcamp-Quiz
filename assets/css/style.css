@@ -1,0 +1,15 @@
+* {
+    text-align: center;
+}
+.purpbutton {
+    background-color: blueviolet;
+    border: 2px solid black;
+    border-radius: 3px;
+    color: white
+}
+.purpbutton:focus {
+    background-color: violet;
+}
+a {
+    text-underline-position: none;
+}
