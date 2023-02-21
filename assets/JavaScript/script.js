@@ -56,8 +56,8 @@ let startMode = "show";
         startScreenEl.setAttribute('style', 'display:none');
         mainQuiz.removeAttribute('class')
     }
-    cCount = 0;
-    iCount = 0;
+    let cCount = 0;
+    let iCount = 0;
     function startTimer(){
         var timerInterval = setInterval(function() {
         secondsLeft--;
