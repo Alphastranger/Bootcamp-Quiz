@@ -18,3 +18,12 @@ a {
 ul {
     list-style-type: none;
 }
+.hide {
+    display: none;
+}
+#time {
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    color: purple;
+}

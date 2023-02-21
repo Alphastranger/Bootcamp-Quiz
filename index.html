@@ -6,9 +6,23 @@
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
+    <div id="time"></div>
+    <div id="start-screen" class="show">
     <h1>Coding Quiz Challenge</h1>
     <p>Try to answer the following questions in as little time as possible!</p>
-    <a href="index2.html" <button class = "purpbutton" type="button"></button>Start Quiz</button></a>
+    <button class = "purpbutton" id="startbutton">Start Quiz</button>
+    </div>
+    <div id="quiz" class="hide">
+            <ul id="questions">
+                <li><button class="purpbutton" id="op1"></button>
+                </li>
+                <li><button class="purpbutton" id="op2"></button></li>
+                <li><button class="purpbutton" id="op3"></button></li>
+                <li><button class="purpbutton" id="op4"></button></li>
+            </ul>
+            </div>
+            <button class = "purpbutton hide" id="submitbutton">Submit</button>
+            <div id="results"></div>
     <script src="./assets/JavaScript/script.js"></script>
 </html>
 </body>
