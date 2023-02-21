@@ -1,13 +1,13 @@
-let questList = document.getElementById("#questions")
-let mainQuiz = document.getElementById("#quiz")
-let submitButton = document.getElementById("#submitbutton")
-let resultsButton = document.getElementById("#results")
-let startButton = document.getElementById("#startbutton")
-let op1 = document.getElementById("op1")
-let op2 = document.getElementById("op2")
-let op3 = document.getElementById("op3")
-let op4 = document.getElementById("op4")
-let timeEl = document.getElementById("#time");
+let questList = document.querySelector("#questions")
+let mainQuiz = document.querySelector("#quiz")
+let submitButton = document.querySelector("#submitbutton")
+let resultsButton = document.querySelector("#results")
+let startButton = document.querySelector("#startbutton")
+let op1 = document.querySelector("op1")
+let op2 = document.querySelector("op2")
+let op3 = document.querySelector("op3")
+let op4 = document.querySelector("op4")
+let timeEl = document.querySelector("#time");
 let secondsLeft = 90
 
 // let questions = [
@@ -47,7 +47,8 @@ let startMode = "show";
     if ( startMode==="show"){
         startMode = "hide";
         startScreenEl.setAttribute('class', 'hide');
-        // function questionOne()
+        mainQuiz.setAttribute('class', 'show')
+        //  function questionOne()
     }
     function startTimer(){
         var timerInterval = setInterval(function() {
