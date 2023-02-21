@@ -136,13 +136,17 @@ function submissionPage(){
     mainQuiz.setAttribute('style', 'display:none')
     resultsButton.setAttribute('style','display:none')
     submitButton.setAttribute('class','show')
-    submitButton.addEventListener('click', function(){
-        localStorage.getItem("Correct Answers");
+    localStorage.getItem("Correct Answers");
         localStorage.getItem("Incorrect Answers");
         letterGrade.textContent = cCount + " Correct\n" + iCount + " Incorrect";
-        submitButton.setAttribute('style', 'display:none')
         finalScore.setAttribute('class', 'show');
-        initials.setItem("Players", Players);
+    submitButton.addEventListener('click', function(){
+        // localStorage.getItem("Correct Answers");
+        // localStorage.getItem("Incorrect Answers");
+        // letterGrade.textContent = cCount + " Correct\n" + iCount + " Incorrect";
+        // finalScore.setAttribute('class', 'show');
+        localStorage.setItem("Players", Players);
+        
     })
 }
 // questionOne ();

@@ -9,6 +9,12 @@
     border-radius: 3px;
     color: white
 }
+.submitButton {
+    background-color: blueviolet;
+    border: 2px solid black;
+    border-radius: 3px;
+    color: white
+}
 .purpbutton:focus {
     background-color: violet;
 }
