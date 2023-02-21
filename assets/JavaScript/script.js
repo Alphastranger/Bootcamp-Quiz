@@ -7,7 +7,7 @@ let op1 = document.getElementById("op1")
 let op2 = document.getElementById("op2")
 let op3 = document.getElementById("op3")
 let op4 = document.getElementById("op4")
-let timeEl = document.getElementById("time");
+let timeEl = document.getElementById("#time");
 let secondsLeft = 90
 
 // let questions = [
@@ -42,21 +42,31 @@ let secondsLeft = 90
 
 // hide start screen
 let startScreenEl = document.getElementById('start-screen');
-let mode = "show";
+let startMode = "show";
  startbutton.addEventListener("click",function () {
-    if ( mode==="show"){
-        mode = "hide";
+    if ( startMode==="show"){
+        startMode = "hide";
         startScreenEl.setAttribute('class', 'hide');
+        // function questionOne()
     }
     function startTimer(){
         var timerInterval = setInterval(function() {
         secondsLeft--;
-        timeEl.innerHTML = secondsLeft;
+        timeEl.textContent = secondsLeft;
+
         if(secondsLeft === 0){
             clearInterval(timerInterval);
-        }})
+        }
+    }, 1000);
     }
 })
-
+function questionOne () { 
+    mainQuiz.innerHTML = questOne.title;
+    op1.innerHTML = questOne.choices[0];
+    op2.innerHTML = questOne.choices[1];
+    op3.innerHTML = questOne.choices[2];
+    op4.innerHTML = questOne.choices[3];
+}
+questionOne ();
 // un-hide questions section
-questionsEl.removeAttribute('class');
+// questionsEl.removeAttribute('class');
