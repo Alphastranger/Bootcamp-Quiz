@@ -56,6 +56,8 @@ let startMode = "show";
         startScreenEl.setAttribute('style', 'display:none');
         mainQuiz.removeAttribute('class')
     }
+    cCount = 0;
+    iCount = 0;
     function startTimer(){
         var timerInterval = setInterval(function() {
         secondsLeft--;
@@ -63,9 +65,11 @@ let startMode = "show";
 
         if(secondsLeft === 0){
             clearInterval(timerInterval);
+            submissionPage();
         }
-    }, 1000);
+       }, 1000);
     };
+    startTimer();
     questionOne();
 })
 function questionOne () { 
@@ -145,7 +149,8 @@ function submissionPage(){
         // localStorage.getItem("Incorrect Answers");
         // letterGrade.textContent = cCount + " Correct\n" + iCount + " Incorrect";
         // finalScore.setAttribute('class', 'show');
-        localStorage.setItem("Players", Players);
+        localStorage.setItem("Players", initials.value);
+        localStorage.setItem("High Score", cCount-iCount);
         
     })
 }
@@ -160,6 +165,7 @@ function correctA (){
 }
 function incorrectA (){
     resultsButton.setAttribute('class','show');
+    secondsLeft-10;
     resultsButton.textContent = 'Incorrect';
     iCount++;
     localStorage.setItem("Incorrect Answers", iCount);
